@@ -1,0 +1,14 @@
+{
+    "name": "scrib",
+    "version": "0.0.0-dev",
+    "description": "A logger utility",
+    
+    "main": "lib/scrib.js",
+    
+    "dependencies": {},
+    
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Acconut/scrib"
+    }
+}
