@@ -1,5 +1,6 @@
 var Scrib = require("../"),
-    EE = require("events").EventEmitter;
+    EE = require("events").EventEmitter,
+    fs = require("fs"),
     Test = module.exports,
     logger = null;
     
@@ -132,6 +133,28 @@ Test.catch = {
         } catch(e) {
             logger.catch(e);
         }
+    },
+    
+    libuv: function(test) {
+        
+        logger.once("log", function(m) {
+            
+            test.equal(m.id, "ENOENT", "ID");
+            test.equal(m.message, "no such file or directory", "Message");
+            test.equal(m.data.errno, 34, "Error number");
+            test.equal(m.data.syscall, "open", "Data from error object");
+            test.equal(m.data.data, "yes", "Additional data");
+            
+            test.done();
+            
+        });
+        
+        try {
+            fs.readFileSync("./sdfuufduhvudshf");
+        } catch(e) {
+            logger.catch(e, { data: "yes" });
+        }
+        
     }
     
 };

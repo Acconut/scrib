@@ -6,7 +6,8 @@
     "main": "lib/scrib.js",
     
     "dependencies": {
-        "async": "0.2.x"
+        "async": "0.2.x",
+        "errno": "0.0.x"
     },
     "devDependencies": {
         "nodeunit": "0.8.x"
