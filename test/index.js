@@ -116,13 +116,12 @@ Test.catch = {
     
     noError: function(test) {
         
-        test.expect(4);
+        test.expect(3);
         
         logger.once("log", function(m) {
             
             test.equal(m.message, "Catch me", "Message");
             test.equal(m.id, "Error", "ID");
-            test.equal(m.data.node, "up", "Data");
             test.ok(m.data.stack.indexOf(__filename) > -1, "Stack");
             
             test.done();
@@ -131,7 +130,7 @@ Test.catch = {
         try {
             throw "Catch me";
         } catch(e) {
-            logger.catch(e, { node: "up" });
+            logger.catch(e);
         }
     }
     
