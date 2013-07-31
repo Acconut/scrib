@@ -18,6 +18,10 @@ Each message has following properties:
 Example
 ---
 
+```
+npm install scrib
+```
+
 ```javascript
 
 var Scrib = require("Scrib"),
