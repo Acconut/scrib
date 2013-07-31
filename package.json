@@ -5,7 +5,16 @@
     
     "main": "lib/scrib.js",
     
-    "dependencies": {},
+    "dependencies": {
+        "async": "0.2.x"
+    },
+    "devDependencies": {
+        "nodeunit": "0.8.x"
+    },
+    
+    "scripts": {
+        "test": "nodeunit ./test/index.js"
+    },
     
     "repository": {
         "type": "git",
