@@ -19,5 +19,7 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/Acconut/scrib"
-    }
+    },
+    
+    "license": "MIT"
 }
