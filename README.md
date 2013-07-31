@@ -91,6 +91,9 @@ try {
 }
 ```
 
+If `e` is an error thrown by libuv, Scrib will trun it into a message: message is `e.description`, id is `e.code`, data.errno is `e.errno`.
+Additional data from `e` is merged into data ([see code](https://github.com/Acconut/scrib/blob/master/lib/scrib.js#L102-L115)).
+
 ### Events
 
 Scrib inherits from `EventEmitter` and has its functions.
@@ -99,5 +102,13 @@ Scrib inherits from `EventEmitter` and has its functions.
 * `id:ID`: Emitted for each log if it's ID is `ID`, e.g. `id:API_TIMEOUT`
 * `category:CATEGORY`: Emitted for each log if it's category is `category`, e.g. `category:API`
 
+### Testing [![Build Status](https://drone.io/github.com/Acconut/scrib/status.png)](https://drone.io/github.com/Acconut/scrib/latest)
+
+```
+git clone git://github.com/Acconut/scrib.git
+cd scrib
+npm install
+npm test
+```
 
 Licensed under [the MIT License](https://raw.github.com/Acconut/scrib/master/LICENSE).
