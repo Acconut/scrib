@@ -46,6 +46,8 @@ Adapters
 
 * [`scrib-local`](https://github.com/Acconut/scrib-local): Write logs into log files
 
+When you want to write one yourself, have a look at [this](https://github.com/Acconut/scrib/wiki/Writing-own-adapters).
+
 API
 ---
 
