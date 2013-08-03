@@ -23,6 +23,20 @@ Test.setup = function(test) {
     });
 };
 
+Test.failSetup = function(test) {
+    var faillogger = new Scrib(
+        ["./failAdapter.js"]
+    , function(e) {
+        
+        test.expect(1);
+        
+        test.ok(e instanceof Error, "Error argument");
+        
+        test.done();
+        
+    });
+};
+
 Test.put = function(test) {
     
     test.expect(7);
